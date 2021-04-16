@@ -6,4 +6,3 @@ export interface Restaurant { //colocar os dados pros restaurantes. Interfaces: 
    rating: number
    imagePath: string
  }
-
