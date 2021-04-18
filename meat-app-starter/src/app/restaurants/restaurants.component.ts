@@ -14,8 +14,8 @@ export class RestaurantsComponent implements OnInit {
 
   // uma vez que foi no serviço e executou a funcao restaurantes do serviço, precisa do subscribe pra salvar o retorno dentro da variavel cu
   ngOnInit() {
-    this.restaurantsService.restaurants().subscribe((retornorestaurante) => { 
-      this.restaurants = retornorestaurante; 
+    this.restaurantsService.restaurants()
+    .subscribe((retornorestaurante) => {this.restaurants = retornorestaurante; 
   
       console.log(this.restaurants);
       });

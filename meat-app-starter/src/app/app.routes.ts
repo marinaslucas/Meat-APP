@@ -9,7 +9,7 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 
 
 export const ROUTES: Routes = [
-    {path: '', component: HomeComponent},
+    {path: '', component: HomeComponent}, 
     {path: 'restaurants', component: RestaurantsComponent},
     {path: 'restaurants/:id', component: RestaurantDetailComponent,
         children:[
