@@ -14,8 +14,8 @@ export class MenuItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   emitAddEvent(){
-    this.add.emit(this.menuItem) //enviei o objeto menuItem quando ocorreu o evento add no click
+    this.add.emit(this.menuItem)
   }
 }

@@ -1,14 +1,10 @@
+<div class="col-md-9 col-xs-12">
 
-            <!--INÍCIO DO MENU -->
-            <div class="col-md-9 col-xs-12">
+  <mt-menu-item
+    *ngFor="let item of menu | async"
+    [menuItem]="item" (add)="shoppingCart.addItem($event)" ></mt-menu-item>    
 
-              <mt-menu-item *ngFor="let item of menu | async" [menuItem]="item" (add)="addMenuItem($event)"></mt-menu-item> <!--puxo os itens do menu(meu observable) que tem todos os itens. o $event serve pra acessar o objeto que foi enviado no meu evento, que foi o menuItem. então a função addMenuItem será executada com o objeto que foi enviado no evento. -->
-             
-          </div>
-
-          <div class="col-md-3 col-xs-12">
-            <!--INICIO DO CARRINHO-->
-            <mt-shopping-cart></mt-shopping-cart>
-          <!-- FIM DO CARRINHO -->
-        </div>
-        <!-- FIM DO MENU -->
+</div>
+<div class="col-md-3 col-xs-12">
+<mt-shopping-cart #shoppingCart></mt-shopping-cart>
+</div>

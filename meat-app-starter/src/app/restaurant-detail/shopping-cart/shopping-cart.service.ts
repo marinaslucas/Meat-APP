@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core'
-
 import {CartItem} from './cart-item.model'
 import {MenuItem} from '../menu-item/menu-item.model'
 
@@ -14,7 +13,7 @@ export class ShoppingCartService {
   }
 
   addItem(item:MenuItem){
-    let foundItem = this.items.find((mItem)=> mItem.menuItem.id === item.id)
+    let foundItem = this.items.find(mItem => mItem.menuItem.id === item.id)
     if(foundItem){
       this.increaseQty(foundItem)
     }else{
@@ -22,7 +21,6 @@ export class ShoppingCartService {
     }
 
   }
-
   increaseQty(item: CartItem){
     item.quantity = item.quantity + 1
   } 
@@ -41,6 +39,6 @@ export class ShoppingCartService {
   total(): number{
     return this.items
       .map(item => item.value())
-      .reduce((prev, value)=> prev+value, 0)
+      .reduce((prev, value) => prev+value, 0) 
   }
 }

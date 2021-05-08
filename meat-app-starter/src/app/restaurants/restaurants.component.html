@@ -1,19 +1,14 @@
-<!-- INíCIO do CONTEÚDO -->
 <section class="content-header">
   <h1>
     Todos os Restaurantes
   </h1>
 </section>
-
-
 <section class="content">
-
   <div class="row">
-          <div *ngFor="let iteracaoum of restaurants" class="col-sm-6 col-xs-12"> <!--na primeira iteração, começa com o primeiro item do array, que está na resposta json-->
-              <mt-restaurant [restaurant]="iteracaoum"></mt-restaurant> <!--a propriedade restaurant do restaurant component recebe o primeiro item do array, que está na resposta json-->             
-          </div>        
+    <div *ngFor="let iteracaoum of restaurants" class="col-sm-6 col-xs-12"> <!--na primeira iteração, começa com o primeiro item do array, que está na resposta json-->
+      <mt-restaurant [restaurant]="iteracaoum"></mt-restaurant> <!--a propriedade restaurant do restaurant component recebe o primeiro item do array, que está na resposta json-->             
+    </div>        
   </div>
 
 </section>
 
-<!-- FIM  do CONTEÚDO -->
