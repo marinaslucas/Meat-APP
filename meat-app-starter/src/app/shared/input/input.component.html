@@ -1,0 +1,12 @@
+<div class="form-group" 
+  [class.has-success]="this.input.valid &amp;&amp; (this.input.dirty || this.input.touched)"
+  [class.has-error]="this.input.invalid &amp;&amp; (this.input.dirty || this.input.touched)">
+
+  <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> {{label}}</label>
+  
+  <ng-content></ng-content>
+  
+  <span class="help-block" *ngIf="this.input.valid &amp;&amp; (this.input.dirty || this.input.touched)"><i class="fa fa-check"></i> Ok</span>
+  <span class="help-block"*ngIf="this.input.invalid &amp;&amp; (this.input.dirty || this.input.touched)"><i class="fa fa-remove"></i> {{errorMessage}}</span>
+  
+</div>
